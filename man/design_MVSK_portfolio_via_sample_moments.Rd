@@ -22,7 +22,7 @@ design_MVSK_portfolio_via_sample_moments(
 \arguments{
 \item{lmd}{Numerical vector of length 4 indicating the weights of first four moments.}
 
-\item{X_moments}{List of moment parameters, see \code{\link{estimate_moments}}.}
+\item{X_moments}{List of moment parameters, see \code{\link{estimate_sample_moments}()}.}
 
 \item{w_init}{Numerical vector indicating the initial value of portfolio weights.}
 
@@ -63,7 +63,6 @@ Design high-order portfolio based on weighted linear combination of first four m
 }
 }
 \examples{
-
 library(highOrderPortfolios)
 data(X50)
 
@@ -76,7 +75,6 @@ lmd <- c(1, xi/2, xi*(xi+1)/6, xi*(xi+1)*(xi+2)/24)
 
 # portfolio optimization
 sol <- design_MVSK_portfolio_via_sample_moments(lmd, X_moments)
-
 
 }
 \references{
